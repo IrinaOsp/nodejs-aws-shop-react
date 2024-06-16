@@ -11,6 +11,8 @@ class MyStaticSiteStack extends cdk.Stack {
 }
 
 const app = new cdk.App();
-new MyStaticSiteStack(app, "MyStaticWebsite");
+new MyStaticSiteStack(app, "MyFrontendStaticWebsite", {
+  env: { region: "eu-west-1" },
+});
 
 app.synth();
